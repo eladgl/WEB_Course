@@ -9,6 +9,7 @@
     float: left;
     box-sizing: border-box;
     font-size: 1.6rem;
+    background-color: rgba(187,187,187, 1);
 }
 
 .Btn:hover {
@@ -16,6 +17,10 @@
     border: solid #00415a;
     text-align: center;
 
+}
+
+.Btn-operator {
+    background-color: rgba(167,167,167, 0.4);
 }
 
 .Btn:active {

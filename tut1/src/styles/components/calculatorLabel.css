@@ -6,7 +6,7 @@
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
     border-color: transparent;
-    background-color: #ddd;
+    background-color: rgba(254, 254, 254, 0.6);
     text-align: left;
     padding: 1rem 10px; 
     white-space: nowrap;
