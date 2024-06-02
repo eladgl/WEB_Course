@@ -1,0 +1,10 @@
+.row {
+    width: 100%;
+    height: 15%;
+    overflow: hidden;
+    margin-bottom: 5px; 
+}
+
+.row .Btn {
+    float: left;
+}

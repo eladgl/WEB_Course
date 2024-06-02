@@ -1,0 +1,30 @@
+.Btn {
+    width: calc(25% - 4px);
+    height: 40px;
+    margin: auto 2px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    float: left;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+}
+
+.Btn:hover {
+    color: #00415a;
+    border: solid #00415a;
+    text-align: center;
+
+}
+
+.Btn:active {
+    transform:scale(0.97);
+    background-color: #9a9a9a;
+}
+
+.Btn-equal {
+    color: #fff;
+    font-size: 2rem;
+    background-color: #009bd6;
+}

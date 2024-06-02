@@ -1,0 +1,22 @@
+
+
+#app {
+    translate: (-50%, -50%);
+    width: 50vw;
+    height: auto;
+    border: 1px solid black;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: #eee;
+    box-shadow: 4px 2px 4px rgba(0,0,0,0.4);
+}
+
+
+
+
+
+
+
