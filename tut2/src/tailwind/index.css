@@ -1,0 +1,28 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/*app styles*/
+@import "./rootStyle.css";
+@import "./appStyle.css";
+
+/*layouts*/
+@import "./layout/rows.css";
+
+/*component styles*/
+@import "./components/buttons.css";
+@import "./components/label.css";
+@import "./components/modal.css";
+
+@layer utilities {
+    .box-shadow-custom {
+        box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .absolute-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+};

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTW App Template</title>
+    <!--
+        The tailwind CDN is designed for development purposes only, and is not the best choice for production.
+        Read more here: https://tailwindcss.com/docs/installation 
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- example for dark theme styling when using tailwind cdn -->
+    <style>
+        /*examples for dark/light themes*/
+        .dark .dark\:text-white {
+            color: #fff;
+        }
+        .dark .dark\:bg-gray-800 {
+            background-color: #1f2937;
+        }
+        .light .light\:text-black {
+            color: #000;
+        }
+
+        /*add your custom css rules here*/
+    </style>
+      <link rel="stylesheet" type="text/css" href="dist/output.css" />
+     
+     <!-- <link rel="stylesheet" type="text/css" href="src/styles/appStyle.css" /> -->
+
+     
+</head>
+
+<body class="dark:text-white light:text-black">
+    <!-- your app code goes here -->
+    <label class="inline-flex items-center cursor-pointer">
+      <input type="checkbox" value="" class="sr-only peer" id="themeToggle">
+      <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+      <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300"></span>
+    </label>
+    <div id="app">
+      
+        <div class="row result">
+          <label id="result"></label>
+        </div>
+        <div class="row">
+          <button class="Btn Btn-notImplemented" value="C">2<sup>nd</sup></button>
+          <button class="Btn Btn-notImplemented" value="C">&pi;</button>
+          <button class="Btn Btn-notImplemented" value="C">e</button>
+          <button class="Btn Btn-operator" value="C">C</button>
+          <button class="Btn Btn-operator">&#x232B;</button>
+        </div>
+        <div class="row">
+          <button class="Btn Btn-notImplemented">x<sup>2</sup></button>
+          <button class="Btn Btn-notImplemented"><sup>1</sup>/x</button>
+          <button class="Btn Btn-notImplemented" value="%">|x|</button>
+          <button class="Btn Btn-notImplemented" value="%">exp</button>
+          <button class="Btn Btn-notImplemented" value="%">mod</button>
+        </div>
+        <div class="row">
+          <button class="Btn Btn-notImplemented" ><sup class="radix">2</sup>&radic;<span style="text-decoration:overline;">&nbsp;x&nbsp;</span></button>
+          <button class="Btn Btn-operator" value="(">&lpar;</button>
+          <button class="Btn Btn-operator" value=")">&rpar;</button>
+          <button class="Btn Btn-notImplemented" value="!">n!</button>
+          <button class="Btn Btn-operator" value="/">&divide;</button>
+        </div>
+        <div class="row">
+          <button class="Btn Btn-operator">x<sup>y</sup></button>
+          <button class="Btn Btn-number" value="7">7</button>
+          <button class="Btn Btn-number" value="8">8</button>
+          <button class="Btn Btn-number" value="9">9</button>
+          <button class="Btn Btn-operator" value="*">&#10005;</button>
+        </div>
+        <div class="row">
+          <button class="Btn Btn-operator">10<sup>x</button>
+          <button class="Btn Btn-number" value="4">4</button>
+          <button class="Btn Btn-number" value="5">5</button>
+          <button class="Btn Btn-number" value="6">6</button>
+          <button class="Btn Btn-operator" value="-">&#8722;</button>
+        </div>
+        <div class="row">
+          <button class="Btn Btn-operator">log</button>
+          <button class="Btn Btn-number" value="1">1</button>
+          <button class="Btn Btn-number" value="2">2</button>
+          <button class="Btn Btn-number" value="3">3</button>
+          <button class="Btn Btn-operator" value="+">+</button>
+        </div>
+        <div class="row">
+          <button class="Btn Btn-operator">ln</button>
+          <button class="Btn Btn-operator"><sup>+</sup>/-</button>
+          <button class="Btn" value="0">0</button>
+          <button class="Btn Btn-operator" value=".">.</button>
+          <button class="Btn Btn-equal" value='='>=</button>
+        </div>
+      </div>
+    <dialog>
+      <p id="errorMsg"></p>
+    </dialog>
+    <!-- special scripts for integration in App Gallery - must be placed at the bottom of the HTML after your code -->
+    <script>
+        // custom config for the MTW app 
+        const mtwAppConfig = {
+            border: true // app border in the MTW page                    
+        }
+
+        ///////////////////////////////////////////////////////
+        // implement this functions in order to use private API        
+        const sendPrivateApiRequest = async () => {
+            // your code here:
+            // sendRequestToParent({ cat: 'getAssets' })
+        }        
+
+        const acceptPrivateApiResponse = async (data) => {
+            // process received data here:
+            // console.log(data)
+        }
+
+        // use this in order to send on document load
+        document.addEventListener('DOMContentLoaded', () => {
+            // your code here:
+            //sendRequestToParent({ method: 'getAssets' })
+        })
+
+    </script>
+    <script src="https://morethanwallet.com/appstore/index.js"></script>
+    <script type="text/javascript" src="/src/scripts/components/button.js"></script>
+    <script type="text/javascript" src="/src/scripts/components/modal.js"></script>
+    <script type="text/javascript" src="/src/scripts/app.js"></script>
+</body>
+
+</html>

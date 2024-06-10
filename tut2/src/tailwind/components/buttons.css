@@ -1,0 +1,43 @@
+.Btn {
+    @apply h-[40px] my-auto mr-0.5 p-2.5 text-center float-left;
+    
+    width: calc(20% - 0.125rem);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    background-color: rgba(187,187,187, 1);
+}
+
+.Btn:hover {
+    color: #00415a;
+    border: solid #00415a;
+    text-align: center;
+}
+
+.Btn:disabled {
+    background-color: rgba(210,210,210,0.2);
+    pointer-events: none;
+    cursor: disabled;
+}
+
+.Btn-operator, .Btn-notImplemented {
+    background-color: rgba(167,167,167, 0.4);
+}
+
+.Btn:active {
+    transform:scale(0.97);
+    background-color: #9a9a9a;
+}
+
+.Btn-equal {
+    color: #fff;
+    font-size: 2rem;
+    background-color: #009bd6;
+}
+
+.radix {
+    margin-right: -6px;
+    font-size: 0.9rem;
+    top: -1em
+}
