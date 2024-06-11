@@ -15,14 +15,52 @@
 @import "./components/modal.css";
 
 @layer utilities {
-    .box-shadow-custom {
-        box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.4);
-    }
+  .box-shadow-custom {
+    box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.4);
+  }
 
-    .absolute-center {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-};
+  .absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.dark {
+  --buttonBackgroundNumber: 0, 0, 0;
+  --buttonBackgroundOperator: 15, 15, 15, 0.7;
+  --buttonBackgroundEqual: 255, 100, 41;
+  --buttonTextColor: 255, 255, 255;
+  --buttonTextColorHover: 255, 100, 41;
+  --lighterDark: #f0f0f0;
+  --lightDark: #c0c0c0;
+  --background: #121212;
+  --border: #fff;
+  --text: #e0e0e0;
+  --row: #1e1e1e;
+  --textArea: #2b2b2b;
+  --modal: #333333;
+  --modalOverlay: 255, 100, 100, 0.8;
+
+  background: var(--background);
+}
+
+.light {
+  --buttonBackgroundNumber: 224 224 224;
+  --buttonBackgroundOperator: 167, 167, 167, 0.4;
+  --buttonBackgroundEqual: 0, 155, 214;
+  --buttonTextColor: 0 0 0;
+  --buttonTextColorHover: 0, 155, 255;
+  --lighterDark: #f9fafb;
+  --lightDark: #c0c0c0;
+  --background: #f9fafb;
+  --border: #e5e7eb;
+  --text: #e0e0e0;
+  --row: #ffffff;
+  --textArea: #ffffff;
+  --modal: #333333;
+  --modalOverlay: 0, 0, 0, 0.8;
+
+  background: var(--background);
+}
