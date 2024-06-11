@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build:css": "tailwindcss build src/tailwind/index.css -o dist/output.css --watch",
+    "build:css": "tailwindcss build src/tailwind/index.css -o output.css --watch",
     "start": "build:css"
   },
   "devDependencies": {
