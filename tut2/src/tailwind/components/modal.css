@@ -1,81 +1,81 @@
-
 dialog {
-    background: black;
-    color: white;
-    padding: 1rem;
-    border: unset;
-    inset: unset;
-    width: unset;
-    height: unset;
-    position: fixed;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 0.5rem 0 rgba(0,0,0,0.2);
-    animation: scale-out 1000ms forwards, fade-out 1000ms forwards;
+  @apply bg-modal-background text-modal-text;
+  padding: 1rem;
+  border: unset;
+  inset: unset;
+  width: unset;
+  height: unset;
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.2);
+  animation: scale-out 1000ms forwards, fade-out 1000ms forwards;
+}
+dialog p {
+  padding: 1rem;
 }
 dialog::backdrop {
-    background: rgba(0,0,0,0.5);
-    animation: test 1000ms forwards;
+  /* background: rgba(0, 0, 0, 0.5); */
+  animation: test 1000ms forwards;
 }
 
 dialog[open] {
-    animation: scale-in 1000ms forwards, fade-in 1000ms forwards;
+  animation: scale-in 1000ms forwards, fade-in 1000ms forwards;
 }
 dialog[open]::backdrop {
-    animation: fade-in 1000ms forwards;
+  animation: fade-in 1000ms forwards;
 }
 
 @keyframes test {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        
-        opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes fade-out {
-    0% {
-        opacity: 1;
-        display: block;
-        left: 50%;
-    }
-    100% {
-        opacity: 0;
-        left: 100%;
-        display: none;
-    }
+  0% {
+    opacity: 1;
+    display: block;
+    left: 50%;
+  }
+  100% {
+    opacity: 0;
+    left: 100%;
+    display: none;
+  }
 }
 
 @keyframes fade-in {
-    0% {
-        opacity: 0;
-        left: 100%;
-    }
-    100% {
-        opacity: 1;
-        left: 50%;
-    }
+  0% {
+    opacity: 0;
+    left: 100%;
+  }
+  100% {
+    opacity: 1;
+    left: 50%;
+  }
 }
 
 @keyframes scale-in {
-    0% {
-        transform: translate(-50%, -50%) scale(0.5);
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(2);
-    }
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+  }
 }
 
 @keyframes scale-out {
-    0% {
-        transform: translate(-50%, -50%) scale(2);
-        display: block;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(0.5);
-        display: none;
-    }
+  0% {
+    transform: translate(-50%, -50%) scale(2);
+    display: block;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.5);
+    display: none;
+  }
 }

@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   numberBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       window.label.innerHTML += e.target.value;
-      updateDecimalButtonState();
     });
   });
 
@@ -26,7 +25,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
           try {
             window.label.textContent = eval(window.label.textContent);
           } catch (e) {
-            window.showModal();
+            window.showModal("Error Calculating");
           }
           break;
         }
@@ -42,24 +41,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
           break;
         }
         default: {
-          console.log(e.target.value);
           window.label.textContent += e.target.value;
           break;
         }
       }
-      updateDecimalButtonState();
     });
   });
 
   const hasDecimalPoint = () => {
     return window.label?.textContent?.includes(".");
   };
-
-  const updateDecimalButtonState = () => {
-    const decimalButton = document.querySelector('button[value="."]');
-    if (decimalButton) {
-      decimalButton.disabled = hasDecimalPoint();
-    }
-  };
-  updateDecimalButtonState();
 });

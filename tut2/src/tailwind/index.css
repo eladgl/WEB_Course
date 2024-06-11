@@ -7,16 +7,18 @@
 @import "./appStyle.css";
 
 /*layouts*/
+@import "./layout/container.css";
 @import "./layout/rows.css";
 
 /*component styles*/
 @import "./components/buttons.css";
 @import "./components/label.css";
 @import "./components/modal.css";
+@import "./components/toggle.css";
 
 @layer utilities {
   .box-shadow-custom {
-    box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 2px 4px rgba(var(--shadowColor));
   }
 
   .absolute-center {
@@ -28,11 +30,12 @@
 }
 
 .dark {
-  --buttonBackgroundNumber: 0, 0, 0;
-  --buttonBackgroundOperator: 15, 15, 15, 0.7;
+  --buttonBackgroundNumber: 255, 100, 41;
+  --buttonBackgroundOperator: 0, 0, 0, 1;
   --buttonBackgroundEqual: 255, 100, 41;
   --buttonTextColor: 255, 255, 255;
-  --buttonTextColorHover: 255, 100, 41;
+  --buttonTextColorHover: 0 255, 41;
+  --buttonEqualColorHover: 100, 255, 41;
   --lighterDark: #f0f0f0;
   --lightDark: #c0c0c0;
   --background: #121212;
@@ -40,8 +43,13 @@
   --text: #e0e0e0;
   --row: #1e1e1e;
   --textArea: #2b2b2b;
+  --textAreaColor: 43, 43, 43;
   --modal: #333333;
+  --modalBackground: 255, 82, 82;
+  --modalText: 255 255 255;
   --modalOverlay: 255, 100, 100, 0.8;
+
+  --shadowColor: 40, 40, 40, 1;
 
   background: var(--background);
 }
@@ -59,8 +67,13 @@
   --text: #e0e0e0;
   --row: #ffffff;
   --textArea: #ffffff;
+  --textAreaColor: 0, 0, 0;
   --modal: #333333;
+  --modalBackground: 51, 51, 51;
+  --modalText: 255 255 255;
   --modalOverlay: 0, 0, 0, 0.8;
+
+  --shadowColor: 0, 0, 0, 0.4;
 
   background: var(--background);
 }

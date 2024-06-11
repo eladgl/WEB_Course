@@ -32,7 +32,7 @@
 }
 
 .Btn-equal {
-  @apply bg-button-background-equal;
+  @apply bg-button-background-equal hover:text-button-equal-hover;
   color: #fff;
   font-size: 2rem;
 }

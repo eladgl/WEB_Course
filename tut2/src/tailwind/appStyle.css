@@ -1,6 +1,9 @@
 #app {
-     @apply w-1/2 h-auto border border-black items-center justify-center mx-auto bg-[#eee] rounded-r-lg box-shadow-custom;
-    /* translate: (-50%, -50%);
+  @apply w-1/2 h-auto border border-black items-center justify-center mx-auto bg-[#eee] box-shadow-custom;
+
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  /* translate: (-50%, -50%);
     width: 50vw;
     height: auto;
     border: 1px solid black;
@@ -10,6 +13,6 @@
     justify-content: center;
     margin: auto;
     background-color: #eee; */
-    /* @apply boxShadow;
+  /* @apply boxShadow;
     box-shadow: 4px 2px 4px rgba(0,0,0,0.4); */
 }
