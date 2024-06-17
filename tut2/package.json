@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build:css": "tailwindcss build src/tailwind/index.css -o output.css --watch",
-    "start": "build:css"
+    "start": "npm run build:css"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
