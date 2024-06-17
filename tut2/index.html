@@ -50,62 +50,7 @@
   </label>
 </div>
 
-    <div id="app">
-      
-        <div class="row result dark:bg-dark-textarea">
-          <label id="result" class="dark:text-dark"></label>
-        </div>
-        <div class="row">
-          <button class="Btn Btn-notImplemented" value="C">2<sup>nd</sup></button>
-          <button class="Btn Btn-notImplemented" value="C">&pi;</button>
-          <button class="Btn Btn-notImplemented" value="C">e</button>
-          <button class="Btn Btn-operator" value="C">C</button>
-          <button class="Btn Btn-operator" value="BS">&#x232B;</button>
-        </div>
-        <div class="row">
-          <button class="Btn Btn-notImplemented">x<sup>2</sup></button>
-          <button class="Btn Btn-notImplemented"><sup>1</sup>/x</button>
-          <button class="Btn Btn-notImplemented" value="%">|x|</button>
-          <button class="Btn Btn-notImplemented" value="%">exp</button>
-          <button class="Btn Btn-notImplemented" value="%">mod</button>
-        </div>
-        <div class="row">
-          <button class="Btn Btn-notImplemented" ><sup class="radix">2</sup>&radic;<span style="text-decoration:overline;">&nbsp;x&nbsp;</span></button>
-          <button class="Btn Btn-operator" value="(">&lpar;</button>
-          <button class="Btn Btn-operator" value=")">&rpar;</button>
-          <button class="Btn Btn-notImplemented" value="!">n!</button>
-          <button class="Btn Btn-operator" value="/">&divide;</button>
-        </div>
-        <div class="row">
-          <button class="Btn Btn-notImplemented">x<sup>y</sup></button>
-          <button class="Btn Btn-number" value="7">7</button>
-          <button class="Btn Btn-number" value="8">8</button>
-          <button class="Btn Btn-number" value="9">9</button>
-          <button class="Btn Btn-operator" value="*">&#10005;</button>
-        </div>
-        <div class="row">
-          <button class="Btn Btn-notImplemented">10<sup>x</button>
-          <button class="Btn Btn-number" value="4">4</button>
-          <button class="Btn Btn-number" value="5">5</button>
-          <button class="Btn Btn-number" value="6">6</button>
-          <button class="Btn Btn-operator" value="-">&#8722;</button>
-        </div>
-        <div class="row">
-          <button class="Btn Btn-notImplemented">log</button>
-          <button class="Btn Btn-number" value="1">1</button>
-          <button class="Btn Btn-number" value="2">2</button>
-          <button class="Btn Btn-number" value="3">3</button>
-          <button class="Btn Btn-operator" value="+">+</button>
-        </div>
-        <div class="row">
-          <button class="Btn Btn-notImplemented">ln</button>
-          <button class="Btn Btn-notImplemented"><sup>+</sup>/-</button>
-          <button class="Btn" value="0">0</button>
-          <button class="Btn Btn-operator" value=".">.</button>
-          <button class="Btn Btn-equal" value='='>=</button>
-        </div>
-      </div>
-      </div>
+    <div id="app"></div>
     <dialog>
       <p id="errorMsg"></p>
     </dialog>
@@ -140,6 +85,9 @@
     <script type="text/javascript" src="./src/scripts/components/button.js"></script>
     <script type="text/javascript" src="./src/scripts/components/modal.js"></script>
     <script type="text/javascript" src="./src/scripts/app.js"></script>
+    <script type="text/javascript" src="./src/scripts/components/calculator/util.js"></script>
+    <script type="text/javascript" src="./src/scripts/components/calculator/schemas/scientificCalc.js"></script>
+    <script type="text/javascript" src="./src/scripts/components/calculator/calculator.js"></script>
 </body>
 
 </html>
