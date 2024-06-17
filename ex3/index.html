@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tailwind example</title>
+        <link rel="stylesheet" href="/style.css" />        
+    </head>
+
+    <body class="dark:bg-gray-700 dark:text-white p-4">
+        <div class="max-w-[1000px] w-full mx-auto relative">
+            <div
+                class="bg-blue-700 dark:bg-blue-500 text-white p-4 flex justify-between"
+            >
+                <button class="block sm:hidden" onclick="toggleMenu()">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="1.5em"
+                        viewBox="0 0 448 512"
+                    >
+                        <path
+                            fill="#ffffff"
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                        />
+                    </svg>
+                    <svg
+                        class="hidden"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="1.5em"
+                        viewBox="0 0 384 512"
+                    >
+                        <path
+                            fill="#ffffff"
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                        />
+                    </svg>
+                </button>
+                <div
+                    class="absolute top-[56px] left-0 bg-blue-300 p-3 hidden w-full"
+                    id="ddMenu"
+                >
+                    <button
+                        class="block py-1 px-2"
+                        onclick="setView('Calculator')"
+                    >
+                        Calculator
+                    </button>
+                    <button
+                        class="block py-1 px-2"
+                        onclick="setView('About')"
+                    >
+                        About
+                    </button>
+                    <button
+                        class="block py-1 px-2"
+                        onclick="setView('Contact')"
+                    >
+                        Contact
+                    </button>
+                </div>
+                <div class="justify-start gap-4 hidden sm:flex">
+                    <button onclick="setView('Calculator')">Calculator</button>
+                    <button onclick="setView('About')">About</button>
+                    <button onclick="setView('Contact')">Contact</button>
+                </div>
+                <div>
+                    <button class="dark:hidden block" onclick="toggle()">
+                        Dark
+                    </button>
+                    <button class="hidden dark:block" onclick="toggle()">
+                        Light
+                    </button>
+                </div>
+            </div>
+            <div class="py-4">
+                <h1 class="text-3xl border-b-[10px] border-blue-300 pb-4">
+                    Calculator
+                </h1>
+                <div id="app" class="w-full bg-blue-100 p-2"></div>                
+            </div>
+        </div>
+        <script src="./app.js"></script>
+    </body>
+</html>
