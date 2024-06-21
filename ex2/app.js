@@ -3,13 +3,13 @@ const header = document.querySelector('h1')
 //get the app div
 const app = document.getElementById('app')
 //top menu buttons container
-const ddMenu = document.querySelector('#ddMenu')
+let ddMenu = ''
 //save all svgs
 const sandwitch = document.querySelectorAll('svg')
 //save the document
 const html = document.documentElement
 //toggle theme
-const toggle = () => html.classList.toggle('dark')
+const toggleTheme = () => html.classList.toggle('dark')
 //set title
 const setView = (v) => {
     header.innerText = v
@@ -90,7 +90,7 @@ const renderContact = () => {
 }
 //render the menu
 const renderMenu = () => {
-    document.getElementById('topMenu').innerHTML = `<button class="block sm:hidden" onclick="toggleMenu()">
+    const toggleMenuBButton = `<button class="block sm:hidden" onclick="toggleMenu()">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="1.5em"
@@ -113,7 +113,8 @@ const renderMenu = () => {
                         />
                     </svg>
                 </button>
-                <div
+    `
+    const hiddenMenu = ` <div
                     class="absolute top-[56px] left-0 bg-blue-300 p-3 hidden w-full"
                     id="ddMenu"
                 >
@@ -136,14 +137,21 @@ const renderMenu = () => {
                         Contact
                     </button>
                 </div>
-                <div class="justify-start gap-4 hidden sm:flex">
+    `
+    const topBarButtons = `<div class="justify-start gap-4 hidden sm:flex">
                     <button onclick="setView('Calculator')">Calculator</button>
                     <button onclick="setView('About')">About</button>
                     <button onclick="setView('Contact')">Contact</button>
                 </div>
+    `
+    document.getElementById('topMenu').innerHTML = `
+                ${toggleMenuBButton}
+                ${hiddenMenu}
+                ${topBarButtons}
                 <div id='themeContainer'>
                    
                 </div>`
+    ddMenu = document.querySelector('#ddMenu')
 }
 //render theme buttons togglers
 const renderThemeToggle = () => {
@@ -152,7 +160,7 @@ const renderThemeToggle = () => {
     btns.forEach((btn, index) => {
         btn.classList.add(...(index === 0 ? ['dark:hidden', 'block'] : ['hidden', 'dark:block']))
         btn.textContent = index === 0 ? 'Dark' : 'Light'
-        btn.addEventListener('click', toggle)
+        btn.addEventListener('click', toggleTheme)
         themeContainer.appendChild(btn)
     })
 }
