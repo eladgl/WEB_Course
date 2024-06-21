@@ -9,7 +9,7 @@ const sandwitch = document.querySelectorAll('svg')
 //save the document
 const html = document.documentElement
 //toggle theme
-const toggle = () => html.classList.toggle('dark')
+const toggleTheme = () => html.classList.toggle('dark')
 //set title
 const setView = (v) => {
     header.innerText = v
@@ -153,7 +153,7 @@ const renderThemeToggle = () => {
     btns.forEach((btn, index) => {
         btn.classList.add(...(index === 0 ? ['dark:hidden', 'block'] : ['hidden', 'dark:block']))
         btn.textContent = index === 0 ? 'Dark' : 'Light'
-        btn.addEventListener('click', toggle)
+        btn.addEventListener('click', toggleTheme)
         themeContainer.appendChild(btn)
     })
 }
